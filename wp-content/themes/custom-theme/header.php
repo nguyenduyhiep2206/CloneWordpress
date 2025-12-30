@@ -15,7 +15,7 @@
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'primary',
-                    'fallback_cb'    => function() {
+                    'fallback_cb'    => function () {
                         wp_page_menu(array(
                             'menu_class' => 'menu',
                             'show_home'  => true,
