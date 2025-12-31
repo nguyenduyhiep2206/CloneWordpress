@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header version 2</title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mystyle.css">
+    
     <?php wp_head(); ?>
 </head>
 

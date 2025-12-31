@@ -12,8 +12,12 @@ if (have_posts()):
                             <div class="card-text">
                                 <?php the_content(); ?>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="btn btn-success">Xem Thêm</a>
-                        </div>
+                            <?php if (in_array(get_post_type(), ['post', 'service'])): ?>
+                                <a href="<?php the_permalink(); ?>" class="btn btn-success">Xem Thêm</a>
+                            <?php elseif (get_post_type() === 'page'): ?>
+                                <a href="<?php echo home_url(); ?>" class="btn btn-success">Quay lại</a>
+                            <?php endif; ?>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -22,3 +26,8 @@ if (have_posts()):
     endwhile;
 endif;
 ?>
+<div class="pagination">
+    <?php
+    echo paginate_links();
+    ?>
+</div>

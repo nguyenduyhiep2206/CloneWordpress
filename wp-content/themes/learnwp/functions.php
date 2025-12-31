@@ -54,6 +54,7 @@ function tao_custom_post_type()
     );
 
     register_post_type('service', $args);
+
 }
 add_action('init', 'tao_custom_post_type');
 
@@ -79,3 +80,4 @@ function lay_category_post_and_service($query)
     }
 }
 add_action('pre_get_posts', 'lay_category_post_and_service');
+
