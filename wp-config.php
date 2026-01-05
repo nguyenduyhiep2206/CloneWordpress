@@ -85,7 +85,7 @@ $table_prefix = 'wp_';
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
@@ -96,7 +96,10 @@ define('WP_SITEURL', 'http://localhost:8000/wordpress');
 // WordPress URL configuration for subdirectory
 
 /* That's all, stop editing! Happy publishing. */
-
+define('DISABLE_WP_CRON', false);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', true);
+define('FS_METHOD', 'direct');
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
